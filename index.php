@@ -22,11 +22,13 @@ $databaseManager->connect();
 // Update the naming if you'd like to work with another collection
 $cardRepository = new CardRepository($databaseManager);
 $cards= $cardRepository->create();
+$cards = $cardRepository->delete();
 $cards = $cardRepository->get();
 
 
 
-var_dump($_POST);
+
+//var_dump($_POST);
 
 // Load your view
 // Tip: you can load this dynamically and based on a variable, if you want to load another view

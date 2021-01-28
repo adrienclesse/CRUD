@@ -33,7 +33,7 @@ class DatabaseManager
             $pdo = new PDO($dsn, $this->name, $this->password );
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             $this->database=$pdo;
-            echo "You have connected!";
+          //  echo "You have connected!";
         } catch (\Exception $e){
             echo"Connection failed: ".$e->getMessage();
         }

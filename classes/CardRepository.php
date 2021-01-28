@@ -56,7 +56,11 @@ class CardRepository
 
     public function delete()
     {
-
+        if (isset($_GET['delete'])) {
+            $clickedId = $_GET['delete']; {
+        $sql = "DELETE FROM pokemon WHERE id= $clickedId";
+        return $this->databaseManager->database->query($sql);
+        }
+        }
     }
-
 }
